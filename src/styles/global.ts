@@ -34,4 +34,30 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
     }
 
+
+
+
+
+
+    //Media queries
+    @media (max-width:991px){
+
+        html {
+            font-size: 55%;
+        }
+
+    }
+
+    @media (max-width:768px){
+        
+    }
+
+    @media (max-width:450px){
+
+        html {
+            font-size: 55%;
+        }
+
+    }
+
 `;
