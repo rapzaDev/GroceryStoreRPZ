@@ -2,9 +2,11 @@ import { useState } from 'react';
 
 import { ShoppingCart } from '../../components/Home/ShoppingCart';
 import { SearchForm } from '../../components/Home/SearchForm';
+import { LoginForm } from '../../components/Home/LoginForm';
+import { HomeFooter } from '../../components/Home/Footer';
 
 import {
-    Container,
+    HomeContainer,
     Header,
     Logo, 
     Navbar,
@@ -12,9 +14,9 @@ import {
     Menubtn,
     Searchbtn,
     Cartbtn,
-    Loginbtn
+    Loginbtn,
+    Credit
 } from './styles';
-import { LoginForm } from '../../components/Home/LoginForm';
 
 function Home() {
 
@@ -59,9 +61,9 @@ function Home() {
     }
 
     return (
-        <Container>
+        <HomeContainer>
             <Header className="header">
-                <Logo href="Home.tsx"> <i className="fas fa-shopping-basket"></i>groco</Logo>
+                <Logo href="Home.tsx"> <i className="fas fa-shopping-basket"></i>rpz groc</Logo>
 
                 <Navbar className="navbar" active={menuBar}>
                     <a href="Home.tsx">Home</a>
@@ -98,7 +100,14 @@ function Home() {
                 <LoginForm active={loginForm}/>
 
             </Header>
-        </Container>
+
+            <div className="space"></div>
+
+
+            <HomeFooter />
+
+            <Credit>created by rapzaDev</Credit>
+        </HomeContainer>
     );
 }
 

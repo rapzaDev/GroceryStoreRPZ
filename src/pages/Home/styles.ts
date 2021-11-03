@@ -4,7 +4,9 @@ interface NavbarProps {
     active: boolean;
 }
 
-export const Container = styled.div``
+export const HomeContainer = styled.div`
+
+`
 
 export const Header = styled.header`
     position: fixed;
@@ -57,7 +59,8 @@ export const Navbar = styled.nav<NavbarProps>`
         background: var(--white);
         border-top: var(--border);
         border-bottom: var(--border);
-        /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
+        
+        transition: clip-path 0.7s;
         clip-path: ${
         props => props.active 
             ? "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
@@ -107,3 +110,16 @@ export const Cartbtn = styled.div``
 export const Loginbtn = styled.div``
 
 export const Searchbtn = styled.div``
+
+export const Credit = styled.section`
+    padding: 3rem 9%;
+
+    text-align: center;
+    background: var(--green);
+    color: var(--white);
+    font-size: 2rem;
+
+    @media (max-width: 991px) {
+        padding: 3rem 2rem;
+    }
+`
