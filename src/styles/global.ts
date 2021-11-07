@@ -19,7 +19,7 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         outline: none; border: none; text-decoration: none;
         text-transform: capitalize;
-        transition: .2s linear;
+        /* transition: .2s linear; */
 
         font-family: 'Poppins', sans-serif;
     }

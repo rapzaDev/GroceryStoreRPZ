@@ -1,13 +1,18 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-import { ShoppingCart } from '../../components/Home/ShoppingCart';
-import { SearchForm } from '../../components/Home/SearchForm';
-import { LoginForm } from '../../components/Home/LoginForm';
-import { HomeFooter } from '../../components/Home/Footer';
+import { ShoppingCart } from '../../components/ShoppingCart';
+import { SearchForm } from '../../components/SearchForm';
+import { LoginForm } from '../../components/LoginForm';
+import { Footer } from '../../components/Footer';
 
 import {
     HomeContainer,
     Header,
+    HomeContent,
+    SlidesContainer,
+    Slide,
+    SlideContent,
+    SlideImage,
     Logo, 
     Navbar,
     Icons,
@@ -18,13 +23,66 @@ import {
     Credit
 } from './styles';
 
+import { Products } from '../../products/index';
+
+type ProductData = {
+    id: number;
+    image: string;
+}
+
 function Home() {
 
+    const productsData = Products;
+    
     const [activeSearch, setActiveSearch] = useState(false);
     const [shopCart, setShopCart] = useState(false);
     const [loginForm, setLoginForm] = useState(false);
     const [menuBar, setMenuBar] = useState(false);
 
+    const [product, setProduct] = useState<ProductData>({} as ProductData);
+    const [slideIndex, setSlideIndex] = useState<number>(0);
+    
+    useEffect(() => {
+        const productObj = productsData[0];
+
+        setProduct(productObj);
+    }, [productsData]);    
+
+    const slides = [
+        <Slide className={productsData[0].id === slideIndex ? "visible" : "invisible"}>
+            <SlideContent>
+                <span>fresh and organic</span>
+                <h3>upto 50% off</h3>
+                <a href="#" className="btn">shop now</a>
+            </SlideContent>
+            <SlideImage>
+                <img src={product.image} alt="" />
+            </SlideImage>
+        </Slide> , 
+
+        <Slide className={productsData[1].id === slideIndex ? "visible" : "invisible"}>
+            <SlideContent>
+                <span>fresh and organic</span>
+                <h3>upto 50% off</h3>
+                <a href="#" className="btn">shop now</a>
+            </SlideContent>
+            <SlideImage>
+                <img src={product.image} alt="" />
+            </SlideImage>
+        </Slide> ,
+
+        <Slide className={productsData[2].id === slideIndex ? "visible" : "invisible"}>
+            <SlideContent>
+                <span>fresh and organic</span>
+                <h3>upto 50% off</h3>
+                <a href="#" className="btn">shop now</a>
+            </SlideContent>
+            <SlideImage>
+                <img src={product.image} alt="" />
+            </SlideImage>
+        </Slide> 
+    ]
+    
     function toggleSearch() {
         setActiveSearch(!activeSearch);
         setMenuBar(false);
@@ -53,6 +111,32 @@ function Home() {
         setLoginForm(false);
     }
 
+    function toggleNextSlide() {
+        let index = slideIndex;
+        ++index;
+
+        if (index === 3) index = 0;
+
+        const productObj = productsData[index];
+
+        setProduct(productObj);
+        setSlideIndex(index);
+
+    }
+
+    function togglePrevSlide() {
+        let index = slideIndex;
+        --index;
+
+        if (index === -1) index = 2;
+
+        const productObj = productsData[index];
+
+        setProduct(productObj);
+        setSlideIndex(index);
+
+    }
+
     window.onscroll = () => {
         setActiveSearch(false);
         setMenuBar(false);
@@ -62,6 +146,7 @@ function Home() {
 
     return (
         <HomeContainer>
+
             <Header className="header">
                 <Logo href="Home.tsx"> <i className="fas fa-shopping-basket"></i>rpz groc</Logo>
 
@@ -101,13 +186,33 @@ function Home() {
 
             </Header>
 
-            <div className="space"></div>
+            <HomeContent>
+                <SlidesContainer>
+                 
+                    {slides}  
 
+                    <div 
+                        id="next-slide" 
+                        className="fas fa-angle-right"
+                        onClick={() => toggleNextSlide()}
+                    ></div>
+                    <div 
+                        id="prev-slide" 
+                        className="fas fa-angle-left"
+                        onClick={() => togglePrevSlide()}
+                    ></div>
 
-            <HomeFooter />
+                </SlidesContainer>
+
+            </HomeContent>
+
+            
+
+            <Footer />
 
             <Credit>created by rapzaDev</Credit>
         </HomeContainer>
+        
     );
 }
 

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 interface NavbarProps {
     active: boolean;
@@ -25,6 +25,147 @@ export const Header = styled.header`
     }
 
 `
+
+export const HomeContent = styled.section`
+    padding-top: 14rem;
+    background: url(../images/home-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+
+    @media (max-width: 450px) {
+        font-size: 4rem;
+    }
+`;
+
+export const SlidesContainer = styled.div`
+    padding: 0 10rem; // qualquer coisa tirar futuramente
+
+
+    div#next-slide, div#prev-slide {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem;
+        box-shadow: var(--box-shadow);
+        text-align: center;
+        background: var(--white);
+        font-size: 3rem;
+        color: var(--black);
+        cursor: pointer;
+
+        transition: .2s linear;
+        &:hover {
+            background: var(--green);
+            color: var(--white);
+        }
+    }
+
+    div#prev-slide{
+        left: 2rem;
+    }
+
+    div#next-slide{
+        right: 2rem;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 5rem;
+    }
+
+        left: 2rem;
+`
+
+export const Slide = styled.div`
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    display: none;
+    /* padding: 0 10rem; */
+
+    &.visible {
+        display: flex;
+    }
+
+
+    @media (max-width: 450px) {
+        font-size: 5rem;
+    }
+`
+
+const fadeLeft = keyframes`
+    0% {
+        transform: translateX(-5rem);
+        opacity: 0;
+    }
+`
+
+export const SlideContent = styled.div`
+    flex: 1 1 40rem;
+    animation:${fadeLeft} .4s linear .4s backwards ;
+
+    a {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: .8rem 3rem;
+        background: var(--green);
+        color: var(--white);
+        font-size: 1.7rem;
+        cursor: pointer;
+
+        transition: background .3s;
+
+        &:hover {
+            background: var(--black);
+        }
+
+        text-align: center;
+        
+    }
+
+    span {
+        color: var(--light-color);
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 6rem;
+        color: var(--black);
+        padding: .5rem 0;
+
+        @media (max-width: 450px) {
+        font-size: 5rem;
+        }
+
+    }
+
+
+    @media (max-width: 450px) {
+        font-size: 5rem;
+    }
+`
+
+const fadeUp = keyframes`
+    0% {
+        transform: scale(.5);
+        opacity: 0;
+    }
+`;
+
+export const SlideImage = styled.div`
+    flex: 1 1 40rem;
+
+    img {
+       animation:${fadeUp} .4s linear;
+       width: 100%;
+       height: 43rem;
+    }
+`
+
 
 export const Logo = styled.a`
     font-size: 2.5rem;

@@ -1,12 +1,12 @@
 import {
-    Footer,
+    FooterContainer,
     BoxContainer,
     Box
 } from './styles';
 
-function HomeFooter() {
+function Footer() {
     return(
-        <Footer>
+        <FooterContainer>
             <BoxContainer>
                 
                 <Box>
@@ -48,8 +48,8 @@ function HomeFooter() {
                 </Box>
 
             </BoxContainer>
-        </Footer>
+        </FooterContainer>
     );
 }
 
-export { HomeFooter };
+export { Footer };

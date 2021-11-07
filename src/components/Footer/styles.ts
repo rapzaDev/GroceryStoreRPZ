@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Footer = styled.footer`
+export const FooterContainer = styled.footer`
     height: 100%;
     background: var(--light-bg);
 `
