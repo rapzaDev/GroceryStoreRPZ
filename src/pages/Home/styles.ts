@@ -286,3 +286,79 @@ export const Credit = styled.section`
         padding: 3rem 2rem;
     }
 `
+
+export const BannerContainer = styled.section`
+    display: grid;
+    grid-template-columns: repeat(3, 40rem);
+    gap: 2rem;
+    justify-content: center;
+
+    margin: 3rem 0;
+
+
+    @media (max-width: 1250px) {
+        grid-template-columns: repeat(2, 40rem);
+    }
+
+    @media (max-width: 920px) {
+        grid-template-columns: repeat(1, 42rem);
+    }
+`
+
+export const Banner = styled.div`
+    position: relative;
+    height: 25rem;
+    overflow: hidden;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+    }
+
+`
+
+export const BannerContent = styled.div`
+    position: absolute;
+    top: 50%; left: 2rem;
+    transform: translateY(-50%);
+
+    span {
+        color: var(--light-color);
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+        padding-top: .5rem;
+        color: var(--black);
+    }
+
+    a {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: .8rem 3rem;
+        background: var(--green);
+        color: var(--white);
+        font-size: 1.7rem;
+        cursor: pointer;
+
+        transition: background .3s;
+
+        &:hover {
+            background: var(--black);
+        }
+
+        text-align: center;
+        width: 100%;
+    }
+
+`
+
+
+

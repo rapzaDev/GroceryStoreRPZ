@@ -20,7 +20,10 @@ import {
     Searchbtn,
     Cartbtn,
     Loginbtn,
-    Credit
+    Credit,
+    BannerContainer,
+    Banner,
+    BannerContent
 } from './styles';
 
 import { Products } from '../../products/index';
@@ -47,41 +50,6 @@ function Home() {
 
         setProduct(productObj);
     }, [productsData]);    
-
-    const slides = [
-        <Slide className={productsData[0].id === slideIndex ? "visible" : "invisible"}>
-            <SlideContent>
-                <span>fresh and organic</span>
-                <h3>upto 50% off</h3>
-                <a href="#" className="btn">shop now</a>
-            </SlideContent>
-            <SlideImage>
-                <img src={product.image} alt="" />
-            </SlideImage>
-        </Slide> , 
-
-        <Slide className={productsData[1].id === slideIndex ? "visible" : "invisible"}>
-            <SlideContent>
-                <span>fresh and organic</span>
-                <h3>upto 50% off</h3>
-                <a href="#" className="btn">shop now</a>
-            </SlideContent>
-            <SlideImage>
-                <img src={product.image} alt="" />
-            </SlideImage>
-        </Slide> ,
-
-        <Slide className={productsData[2].id === slideIndex ? "visible" : "invisible"}>
-            <SlideContent>
-                <span>fresh and organic</span>
-                <h3>upto 50% off</h3>
-                <a href="#" className="btn">shop now</a>
-            </SlideContent>
-            <SlideImage>
-                <img src={product.image} alt="" />
-            </SlideImage>
-        </Slide> 
-    ]
     
     function toggleSearch() {
         setActiveSearch(!activeSearch);
@@ -144,6 +112,73 @@ function Home() {
         setLoginForm(false);
     }
 
+    const Slides = [
+        <Slide className={productsData[0].id === slideIndex ? "visible" : "invisible"}>
+            <SlideContent>
+                <span>fresh and organic</span>
+                <h3>upto 50% off</h3>
+                <a href="#" className="btn">shop now</a>
+            </SlideContent>
+            <SlideImage>
+                <img src={product.image} alt="" />
+            </SlideImage>
+        </Slide> , 
+
+        <Slide className={productsData[1].id === slideIndex ? "visible" : "invisible"}>
+            <SlideContent>
+                <span>fresh and organic</span>
+                <h3>upto 50% off</h3>
+                <a href="#" className="btn">shop now</a>
+            </SlideContent>
+            <SlideImage>
+                <img src={product.image} alt="" />
+            </SlideImage>
+        </Slide> ,
+
+        <Slide className={productsData[2].id === slideIndex ? "visible" : "invisible"}>
+            <SlideContent>
+                <span>fresh and organic</span>
+                <h3>upto 50% off</h3>
+                <a href="#" className="btn">shop now</a>
+            </SlideContent>
+            <SlideImage>
+                <img src={product.image} alt="" />
+            </SlideImage>
+        </Slide> 
+    ]
+
+    const Banners = [
+            <Banner className="banner">
+                <img src="images/banner-1.jpg" alt="" />
+                <BannerContent className="content">
+                    <span>limited sales</span>
+                    <h3>upto 50% off</h3>
+                    <a href="#" className="btn">shop now</a>
+                </BannerContent>
+
+            </Banner>,
+
+            <Banner className="banner">
+                <img src="images/banner-2.jpg" alt="" />
+                <BannerContent className="content">
+                    <span>limited sales</span>
+                    <h3>upto 50% off</h3>
+                    <a href="#" className="btn">shop now</a>
+                </BannerContent>
+
+            </Banner>,
+
+            <Banner className="banner">
+                <img src="images/banner-3.jpg" alt="" />
+                <BannerContent className="content">
+                    <span>limited sales</span>
+                    <h3>upto 50% off</h3>
+                    <a href="#" className="btn">shop now</a>
+                </BannerContent>
+
+            </Banner>
+    ]
+
     return (
         <HomeContainer>
 
@@ -189,7 +224,7 @@ function Home() {
             <HomeContent className="home">
                 <SlidesContainer>
                  
-                    {slides}  
+                    { Slides }  
 
                     <div 
                         id="next-slide" 
@@ -206,7 +241,9 @@ function Home() {
 
             </HomeContent>
 
-            
+            <BannerContainer className="banner-container">
+                { Banners }
+            </BannerContainer>
 
             <Footer />
 
