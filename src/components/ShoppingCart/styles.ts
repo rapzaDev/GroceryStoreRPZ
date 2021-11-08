@@ -7,11 +7,11 @@ interface ShopCartProps {
 export const Container = styled.div<ShopCartProps>`
     position: absolute;
     top: 115%; 
-
-    transition: .3s linear;
-    right: ${props => props.active ? "2rem" : "-105%"};
+    right: ${props => props.active ? "2rem" : "-100%"};
     background: var(--white);
     box-shadow: var(--box-shadow);
+
+    transition: right 0.4s linear;
 
     width: 35rem;
     padding: 2rem;

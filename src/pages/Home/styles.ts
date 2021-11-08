@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 interface NavbarProps {
     active: boolean;
@@ -32,6 +32,21 @@ export const HomeContent = styled.section`
     background-size: cover;
     background-position: center;
     position: relative;
+
+    @media (max-width: 991px) {
+        
+        & div#next-slide,
+        & div#prev-slide {
+            transform: translateY(0);
+            top: 88%;
+        }
+
+        & div#prev-slide {
+            left: auto;
+            right: 8rem;
+        }
+
+    }
 
 
     @media (max-width: 450px) {
@@ -158,11 +173,18 @@ const fadeUp = keyframes`
 
 export const SlideImage = styled.div`
     flex: 1 1 40rem;
+    margin: 3rem 0;
 
     img {
        animation:${fadeUp} .4s linear;
        width: 100%;
-       height: 43rem;
+       height: 48rem;
+    }
+
+    @media (max-width: 1251px) {
+        img {
+            height: 100%;
+        }
     }
 `
 

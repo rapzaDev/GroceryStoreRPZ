@@ -15,6 +15,7 @@ export const Form = styled.form<SearchFormProps>`
     height: 5.5rem;
     box-shadow: var(--box-shadow);
     background: var(--white);
+    transition: .3s linear;
 
     input {
         height: 100%; width: 100%;

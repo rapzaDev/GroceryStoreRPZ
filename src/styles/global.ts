@@ -19,7 +19,25 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         outline: none; border: none; text-decoration: none;
         text-transform: capitalize;
-        /* transition: .2s linear; */
+
+        @media (max-width: 991px) {
+
+            section{
+                padding: 3rem 2rem;
+            }
+
+            section.home div#next-slide,
+            section.home div#prev-slide {
+                transform: translateY(0);
+                top: 88%;
+            }
+
+            section.home div#prev-slide {
+                left: auto;
+                right: 8rem;
+            }
+
+        }
 
         font-family: 'Poppins', sans-serif;
     }

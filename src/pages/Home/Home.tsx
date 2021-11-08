@@ -186,7 +186,7 @@ function Home() {
 
             </Header>
 
-            <HomeContent>
+            <HomeContent className="home">
                 <SlidesContainer>
                  
                     {slides}  
