@@ -266,8 +266,6 @@ export const Menubtn = styled.div`
     }
 `
 
-export const Seacrbtn = styled.div``
-
 export const Cartbtn = styled.div``
 
 export const Loginbtn = styled.div``
@@ -301,7 +299,7 @@ export const BannerContainer = styled.section`
     }
 
     @media (max-width: 920px) {
-        grid-template-columns: repeat(1, 42rem);
+        grid-template-columns: repeat(1, 70rem);
     }
 `
 

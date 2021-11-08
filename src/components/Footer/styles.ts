@@ -10,10 +10,23 @@ export const BoxContainer = styled.div`
   width: 100%;
   justify-content: center;
   grid-template-columns: repeat(4, 30rem);
+
+  @media (max-width:1310px){
+    grid-template-columns: repeat(2, 40rem);
+  }
+
+  @media (max-width:775px){
+    grid-template-columns: repeat(1, 40rem);
+  }
+
 `
 
 export const Box = styled.div`
 
+    @media (max-width:1310px){
+        /* margin-left: auto; */
+        margin-right: auto;
+    } 
 
     h3 {
         font-size: 2.2rem;
