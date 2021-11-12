@@ -15,6 +15,7 @@ import {
     SlideImage,
     Logo, 
     Navbar,
+    HomeLink,
     Icons,
     Menubtn,
     Searchbtn,
@@ -186,12 +187,12 @@ function Home() {
                 <Logo href="Home.tsx"> <i className="fas fa-shopping-basket"></i>rpz groc</Logo>
 
                 <Navbar className="navbar" active={menuBar}>
-                    <a href="Home.tsx">Home</a>
-                    <a href="Shop.tsx">Shop</a>
-                    <a href="About.tsx">About</a>
-                    <a href="Review.tsx">Review</a>
-                    <a href="Blog.tsx">Blog</a>
-                    <a href="Contact.tsx">Contact</a>
+                    <HomeLink to="/">Home</HomeLink>
+                    <HomeLink to="Shop">Shop</HomeLink>
+                    <HomeLink to="About">About</HomeLink>
+                    <HomeLink to="Review">Review</HomeLink>
+                    <HomeLink to="Blog">Blog</HomeLink>
+                    <HomeLink to="Contact">Contact</HomeLink>
                 </Navbar>
 
                 <Icons>

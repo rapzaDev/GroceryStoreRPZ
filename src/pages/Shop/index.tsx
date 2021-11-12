@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { ShoppingCart } from '../../components/ShoppingCart';
 import { SearchForm } from '../../components/SearchForm';
@@ -15,8 +16,15 @@ import {
     Searchbtn,
     Cartbtn,
     Loginbtn,
-    Credit
+    Credit,
+    ShopHeading, 
+    Category,
+    Title,
+    BoxContainer,
+    Box
 } from './styles';
+
+
 
 function Shop() {
 
@@ -66,12 +74,12 @@ function Shop() {
                 <Logo href="Home.tsx"> <i className="fas fa-shopping-basket"></i>rpz groc</Logo>
 
                 <Navbar className="navbar" active={menuBar}>
-                    <a href="Home.tsx">Home</a>
-                    <a href="Shop.tsx">Shop</a>
-                    <a href="About.tsx">About</a>
-                    <a href="Review.tsx">Review</a>
-                    <a href="Blog.tsx">Blog</a>
-                    <a href="Contact.tsx">Contact</a>
+                    <Link to="/">Home</Link>
+                    <Link to="/shop">Shop</Link>
+                    <Link to="About">About</Link>
+                    <Link to="Review">Review</Link>
+                    <Link to="Blog">Blog</Link>
+                    <Link to="Contact">Contact</Link>
                 </Navbar>
 
                 <Icons>
@@ -101,6 +109,43 @@ function Shop() {
 
             </Header>
 
+            <ShopHeading>
+                <h1>our shop</h1>
+                <p> <Box to="/">{`home >>`}</Box> shop</p>
+            </ShopHeading>
+
+            <Category>
+
+                <Title>our<span> category</span> <Box to="/shop">{'view all >>'}</Box> </Title>
+
+                <BoxContainer>
+                    <Box to="/shop" className="box">
+                        <img src="images/cat-1.png" alt="" />
+                        <h3>fresh fruits</h3>
+                    </Box>
+
+                    <Box to="/shop" className="box">
+                        <img src="images/cat-2.png" alt="" />
+                        <h3>vegetables</h3>
+                    </Box>
+
+                    <Box to="/shop" className="box">
+                        <img src="images/cat-3.png" alt="" />
+                        <h3>organic spices</h3>
+                    </Box>
+
+                    <Box to="/shop" className="box">
+                        <img src="images/cat-4.png" alt="" />
+                        <h3>fresh meat</h3>
+                    </Box>
+
+                    <Box to="/shop" className="box">
+                        <img src="images/cat-5.png" alt="" />
+                        <h3>organic wheat</h3>
+                    </Box>
+                </BoxContainer>
+
+            </Category>
 
             <Footer />
 

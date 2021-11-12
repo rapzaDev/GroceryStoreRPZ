@@ -1,12 +1,7 @@
-import { Home } from "./pages/Home/Home";
-import { Shop } from "./pages/Shop";
+import { Routes } from './routes';
 
 function App() {
-  return (
-    <>
-      <Home/>
-    </>
-  );
+  return ( <Routes /> );
 }
 
 export default App;

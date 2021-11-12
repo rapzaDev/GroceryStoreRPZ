@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { Link } from 'react-router-dom';
 
 interface NavbarProps {
     active: boolean;
@@ -242,6 +243,8 @@ export const Navbar = styled.nav<NavbarProps>`
 
     
 `
+
+export const HomeLink = styled(Link)``;
 
 export const Icons = styled.div`
     div {
