@@ -21,7 +21,14 @@ import {
     Category,
     Title,
     BoxContainer,
-    Box
+    Box,
+    Products,
+    ProductContainer,
+    ProductBox,
+    ProductIcons,
+    ProductImage,
+    ProductContent,
+    Stars
 } from './styles';
 
 
@@ -67,6 +74,259 @@ function Shop() {
         setShopCart(false);
         setLoginForm(false);
     }
+
+    const categoryContent = [
+        <>
+            <Title>our<span> category</span> <Box to="/shop">{'view all >>'}</Box> </Title>
+
+            <BoxContainer>
+                <Box to="/shop" className="box">
+                    <img src="images/cat-1.png" alt="" />
+                    <h3>fresh fruits</h3>
+                </Box>
+
+                <Box to="/shop" className="box">
+                    <img src="images/cat-2.png" alt="" />
+                    <h3>vegetables</h3>
+                </Box>
+
+                <Box to="/shop" className="box">
+                    <img src="images/cat-3.png" alt="" />
+                    <h3>organic spices</h3>
+                </Box>
+
+                <Box to="/shop" className="box">
+                    <img src="images/cat-4.png" alt="" />
+                    <h3>fresh meat</h3>
+                </Box>
+
+                <Box to="/shop" className="box">
+                    <img src="images/cat-5.png" alt="" />
+                    <h3>organic wheat</h3>
+                </Box>
+            </BoxContainer>
+        </>
+    ];
+
+    const productsContent = [
+        <> 
+            <Title>our<span> products</span> <Box to="/shop">{'view all >>'}</Box> </Title>
+
+            <ProductContainer>
+            
+                <ProductBox>
+            
+                    <ProductIcons className="icons">
+                        <Link to="/shop" className="fas fa-shopping-cart"></Link>
+                        <Link to="/shop" className="fas fa-heart"></Link>
+                        <Link to="/shop" className="fas fa-eye"></Link>
+                    </ProductIcons>
+            
+                    <ProductImage>
+                        <img src="images/product-1.jpg" alt="" />
+                    </ProductImage>
+
+                    <ProductContent>
+                        <h3>organic food</h3>
+                        <div className="price">$19.99</div>
+                        <Stars>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                        </Stars>
+                    </ProductContent>
+
+                </ProductBox>
+
+                <ProductBox>
+            
+                    <ProductIcons className="icons">
+                        <Link to="/shop" className="fas fa-shopping-cart"></Link>
+                        <Link to="/shop" className="fas fa-heart"></Link>
+                        <Link to="/shop" className="fas fa-eye"></Link>
+                    </ProductIcons>
+            
+                    <ProductImage>
+                        <img src="images/product-2.jpg" alt="" />
+                    </ProductImage>
+
+                    <ProductContent>
+                        <h3>organic food</h3>
+                        <div className="price">$19.99</div>
+                        <Stars>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                        </Stars>
+                    </ProductContent>
+
+                </ProductBox>
+
+                <ProductBox>
+            
+                    <ProductIcons className="icons">
+                        <Link to="/shop" className="fas fa-shopping-cart"></Link>
+                        <Link to="/shop" className="fas fa-heart"></Link>
+                        <Link to="/shop" className="fas fa-eye"></Link>
+                    </ProductIcons>
+            
+                    <ProductImage>
+                        <img src="images/product-3.jpg" alt="" />
+                    </ProductImage>
+
+                    <ProductContent>
+                        <h3>organic food</h3>
+                        <div className="price">$19.99</div>
+                        <Stars>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                        </Stars>
+                    </ProductContent>
+
+                </ProductBox>
+
+                <ProductBox>
+            
+                    <ProductIcons className="icons">
+                        <Link to="/shop" className="fas fa-shopping-cart"></Link>
+                        <Link to="/shop" className="fas fa-heart"></Link>
+                        <Link to="/shop" className="fas fa-eye"></Link>
+                    </ProductIcons>
+            
+                    <ProductImage>
+                        <img src="images/product-4.jpg" alt="" />
+                    </ProductImage>
+
+                    <ProductContent>
+                        <h3>organic food</h3>
+                        <div className="price">$19.99</div>
+                        <Stars>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                        </Stars>
+                    </ProductContent>
+
+                </ProductBox>
+
+                <ProductBox>
+            
+                    <ProductIcons className="icons">
+                        <Link to="/shop" className="fas fa-shopping-cart"></Link>
+                        <Link to="/shop" className="fas fa-heart"></Link>
+                        <Link to="/shop" className="fas fa-eye"></Link>
+                    </ProductIcons>
+            
+                    <ProductImage>
+                        <img src="images/product-5.jpg" alt="" />
+                    </ProductImage>
+
+                    <ProductContent>
+                        <h3>organic food</h3>
+                        <div className="price">$19.99</div>
+                        <Stars>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                        </Stars>
+                    </ProductContent>
+
+                </ProductBox>
+
+                <ProductBox>
+            
+                    <ProductIcons className="icons">
+                        <Link to="/shop" className="fas fa-shopping-cart"></Link>
+                        <Link to="/shop" className="fas fa-heart"></Link>
+                        <Link to="/shop" className="fas fa-eye"></Link>
+                    </ProductIcons>
+            
+                    <ProductImage>
+                        <img src="images/product-6.jpg" alt="" />
+                    </ProductImage>
+
+                    <ProductContent>
+                        <h3>organic food</h3>
+                        <div className="price">$19.99</div>
+                        <Stars>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                        </Stars>
+                    </ProductContent>
+
+                </ProductBox>
+
+                <ProductBox>
+            
+                    <ProductIcons className="icons">
+                        <Link to="/shop" className="fas fa-shopping-cart"></Link>
+                        <Link to="/shop" className="fas fa-heart"></Link>
+                        <Link to="/shop" className="fas fa-eye"></Link>
+                    </ProductIcons>
+            
+                    <ProductImage>
+                        <img src="images/product-7.jpg" alt="" />
+                    </ProductImage>
+
+                    <ProductContent>
+                        <h3>organic food</h3>
+                        <div className="price">$19.99</div>
+                        <Stars>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                        </Stars>
+                    </ProductContent>
+
+                </ProductBox>
+
+                <ProductBox>
+            
+                    <ProductIcons className="icons">
+                        <Link to="/shop" className="fas fa-shopping-cart"></Link>
+                        <Link to="/shop" className="fas fa-heart"></Link>
+                        <Link to="/shop" className="fas fa-eye"></Link>
+                    </ProductIcons>
+            
+                    <ProductImage>
+                        <img src="images/product-8.jpg" alt="" />
+                    </ProductImage>
+
+                    <ProductContent>
+                        <h3>organic food</h3>
+                        <div className="price">$19.99</div>
+                        <Stars>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                        </Stars>
+                    </ProductContent>
+
+                </ProductBox>
+            
+            </ProductContainer>
+        </>
+    ]
+        
+    
 
     return (
         <ShopContainer>
@@ -116,36 +376,15 @@ function Shop() {
 
             <Category>
 
-                <Title>our<span> category</span> <Box to="/shop">{'view all >>'}</Box> </Title>
-
-                <BoxContainer>
-                    <Box to="/shop" className="box">
-                        <img src="images/cat-1.png" alt="" />
-                        <h3>fresh fruits</h3>
-                    </Box>
-
-                    <Box to="/shop" className="box">
-                        <img src="images/cat-2.png" alt="" />
-                        <h3>vegetables</h3>
-                    </Box>
-
-                    <Box to="/shop" className="box">
-                        <img src="images/cat-3.png" alt="" />
-                        <h3>organic spices</h3>
-                    </Box>
-
-                    <Box to="/shop" className="box">
-                        <img src="images/cat-4.png" alt="" />
-                        <h3>fresh meat</h3>
-                    </Box>
-
-                    <Box to="/shop" className="box">
-                        <img src="images/cat-5.png" alt="" />
-                        <h3>organic wheat</h3>
-                    </Box>
-                </BoxContainer>
+                {categoryContent}
 
             </Category>
+
+            <Products>
+
+                {productsContent}
+
+            </Products>
 
             <Footer />
 

@@ -231,3 +231,117 @@ export const Box = styled(Link)`
 
 
 `;
+
+
+export const Products = styled.section`
+    padding: 0 10rem;
+
+    @media(max-width: 768px) {
+        padding: 0 3rem;
+    }
+`
+
+export const ProductContainer = styled.div`
+    
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 2.75rem;
+
+    padding: 2rem 0 5rem 0;
+    justify-content: center;
+
+
+    @media(max-width: 1337px) {
+        grid-template-columns: repeat(3, auto);
+        justify-content: space-around;
+    }
+
+    @media(max-width: 790px) {
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-around;
+    }
+
+    @media(max-width: 540px) {
+        grid-template-columns: repeat(1, auto);
+        gap: none;
+    }
+`
+
+export const ProductBox = styled.div`
+    position: relative;
+    background: var(--light-bg);
+    text-align: center;
+    overflow: hidden;
+    
+    div.icons {
+        transition: top .3s linear;
+    }
+
+    &:hover div.icons {
+        top: 0;
+    }
+`
+
+export const ProductIcons = styled.div`
+    position: absolute;
+    top: -105%; left: 0;
+    height: 30rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(243, 243, 243, .8);
+    gap: 1rem;
+
+    a {
+        color: var(--light-color);
+        font-size: 2rem;
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem;
+        background: var(--white);
+        box-shadow: var(--box-shadow);
+
+        &:hover {
+            background: var(--green);
+            color: var(--white);
+        }
+    }
+`
+
+export const ProductImage = styled.div`
+    height: 30rem;
+    width: 100%;
+    overflow: hidden;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+`
+
+export const ProductContent = styled.div`
+    padding: 1.5rem;
+
+    h3 {
+        font-size: 2rem;
+        color: var(--black);
+    }
+
+    div.price {
+        font-size: 2rem;
+        color: var(--black);
+        padding: 1rem 0;
+    }
+
+`
+
+export const Stars = styled.div`
+    i {
+        font-size: 1.7rem;
+        color: var(--green);
+    }
+`
+
