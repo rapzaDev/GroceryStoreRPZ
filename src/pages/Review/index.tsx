@@ -17,6 +17,7 @@ import {
     Loginbtn,
     Credit
 } from './styles';
+import { Link } from 'react-router-dom';
 
 function Review() {
 
@@ -66,12 +67,12 @@ function Review() {
                 <Logo href="Home.tsx"> <i className="fas fa-shopping-basket"></i>rpz groc</Logo>
 
                 <Navbar className="navbar" active={menuBar}>
-                    <a href="Home.tsx">Home</a>
-                    <a href="Shop.tsx">Shop</a>
-                    <a href="About.tsx">About</a>
-                    <a href="Review.tsx">Review</a>
-                    <a href="Blog.tsx">Blog</a>
-                    <a href="Contact.tsx">Contact</a>
+                    <Link to="/">Home</Link>
+                    <Link to="/shop">Shop</Link>
+                    <Link to="/about">About</Link>
+                    <Link to="/review">Review</Link>
+                    <Link to="/blog">Blog</Link>
+                    <Link to="/contact">Contact</Link>
                 </Navbar>
 
                 <Icons>

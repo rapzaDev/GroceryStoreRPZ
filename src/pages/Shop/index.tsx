@@ -336,10 +336,10 @@ function Shop() {
                 <Navbar className="navbar" active={menuBar}>
                     <Link to="/">Home</Link>
                     <Link to="/shop">Shop</Link>
-                    <Link to="About">About</Link>
-                    <Link to="Review">Review</Link>
-                    <Link to="Blog">Blog</Link>
-                    <Link to="Contact">Contact</Link>
+                    <Link to="/about">About</Link>
+                    <Link to="/review">Review</Link>
+                    <Link to="/blog">Blog</Link>
+                    <Link to="/contact">Contact</Link>
                 </Navbar>
 
                 <Icons>

@@ -188,11 +188,11 @@ function Home() {
 
                 <Navbar className="navbar" active={menuBar}>
                     <HomeLink to="/">Home</HomeLink>
-                    <HomeLink to="Shop">Shop</HomeLink>
-                    <HomeLink to="About">About</HomeLink>
-                    <HomeLink to="Review">Review</HomeLink>
-                    <HomeLink to="Blog">Blog</HomeLink>
-                    <HomeLink to="Contact">Contact</HomeLink>
+                    <HomeLink to="/shop">Shop</HomeLink>
+                    <HomeLink to="/about">About</HomeLink>
+                    <HomeLink to="/review">Review</HomeLink>
+                    <HomeLink to="/blog">Blog</HomeLink>
+                    <HomeLink to="/contact">Contact</HomeLink>
                 </Navbar>
 
                 <Icons>

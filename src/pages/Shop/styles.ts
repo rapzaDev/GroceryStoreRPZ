@@ -1,12 +1,34 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
 
 interface NavbarProps {
     active: boolean;
 }
 
-export const ShopContainer = styled.div`
+const fadeUp = keyframes`
+    0% {
+        opacity: 0;
+    }
 
+    25% {
+    
+    }
+
+    50% {
+        opacity: 0.35;
+    }
+
+    75% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 1;
+    }
+`;
+
+export const ShopContainer = styled.div`
+    /* animation: ${fadeUp} 1.0s linear; */
 `
 
 export const Header = styled.header`

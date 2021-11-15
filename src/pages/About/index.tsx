@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom'
 
 import { ShoppingCart } from '../../components/ShoppingCart';
 import { SearchForm } from '../../components/SearchForm';
@@ -15,7 +16,17 @@ import {
     Searchbtn,
     Cartbtn,
     Loginbtn,
-    Credit
+    Credit,
+    AboutHeading,
+    AboutSection,
+    AboutImg,
+    AboutContent,
+    GallerySection,
+    CategoryTitle,
+    CategoryBox,
+    BoxContainer,
+    Box,
+    CategoryIcons
 } from './styles';
 
 function About() {
@@ -60,18 +71,76 @@ function About() {
         setLoginForm(false);
     }
 
+    const aboutCategoryContent = [
+        <>
+        <Box>
+                        <img src="images/gallery-img-1.jpg" alt="" />
+                        <CategoryIcons className="categoryIcons">
+                            <a href="#" className="fas fa-eye"></a>
+                            <a href="#" className="fas fa-heart"></a>
+                            <a href="#" className="fas fa-share-alt"></a>
+                        </CategoryIcons>
+                    </Box>
+
+                    <Box>
+                        <img src="images/gallery-img-2.jpg" alt="" />
+                        <CategoryIcons className="categoryIcons">
+                            <a href="#" className="fas fa-eye"></a>
+                            <a href="#" className="fas fa-heart"></a>
+                            <a href="#" className="fas fa-share-alt"></a>
+                        </CategoryIcons>
+                    </Box>
+
+                    <Box>
+                        <img src="images/gallery-img-3.jpg" alt="" />
+                        <CategoryIcons className="categoryIcons">
+                            <a href="#" className="fas fa-eye"></a>
+                            <a href="#" className="fas fa-heart"></a>
+                            <a href="#" className="fas fa-share-alt"></a>
+                        </CategoryIcons>
+                    </Box>
+
+                    <Box>
+                        <img src="images/gallery-img-4.jpg" alt="" />
+                        <CategoryIcons className="categoryIcons">
+                            <a href="#" className="fas fa-eye"></a>
+                            <a href="#" className="fas fa-heart"></a>
+                            <a href="#" className="fas fa-share-alt"></a>
+                        </CategoryIcons>
+                    </Box>
+
+                    <Box>
+                        <img src="images/gallery-img-5.jpg" alt="" />
+                        <CategoryIcons className="categoryIcons">
+                            <a href="#" className="fas fa-eye"></a>
+                            <a href="#" className="fas fa-heart"></a>
+                            <a href="#" className="fas fa-share-alt"></a>
+                        </CategoryIcons>
+                    </Box>
+
+                    <Box>
+                        <img src="images/gallery-img-6.jpg" alt="" />
+                        <CategoryIcons className="categoryIcons">
+                            <a href="#" className="fas fa-eye"></a>
+                            <a href="#" className="fas fa-heart"></a>
+                            <a href="#" className="fas fa-share-alt"></a>
+                        </CategoryIcons>
+                    </Box>
+        </>
+    ]
+
     return (
         <AboutContainer>
             <Header className="header">
                 <Logo href="Home.tsx"> <i className="fas fa-shopping-basket"></i>rpz groc</Logo>
 
                 <Navbar className="navbar" active={menuBar}>
-                    <a href="Home.tsx">Home</a>
-                    <a href="Shop.tsx">Shop</a>
-                    <a href="About.tsx">About</a>
-                    <a href="Review.tsx">Review</a>
-                    <a href="Blog.tsx">Blog</a>
-                    <a href="Contact.tsx">Contact</a>
+                    <Link to="/">Home</Link>
+                    <Link to="/shop">Shop</Link>
+                    <Link to="/about">About</Link>
+                    <Link to="/review">Review</Link>
+                    <Link to="/blog">Blog</Link>
+                    <Link to="/contact">Contact</Link>
                 </Navbar>
 
                 <Icons>
@@ -101,6 +170,44 @@ function About() {
 
             </Header>
 
+            <AboutHeading>
+                <h1>about us</h1>
+                <p> <Link to="/">{`home >>`}</Link>about</p>
+            </AboutHeading>
+
+            <AboutSection>
+                <AboutImg>
+                    <img src="images/about-img.jpg" alt="" />
+                </AboutImg>
+
+                <AboutContent>
+                    <span>welcome to our shop</span>
+                    <h3>fresh and organic groceries</h3>
+                    <p>
+                       Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                       Delectus illum, nesciunt nostrum porro veritatis hic nulla impedit natus adipisci possimus
+                       quos labore aspernatur veniam, eaque, vero reiciendis mollitia odio consequatur.
+                    </p>
+                    <p>
+                       Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                       Delectus illum, nesciunt nostrum porro veritatis hic nulla impedit natus
+                    </p>
+                    <Link to="/about">read more</Link>
+
+                </AboutContent>
+            </AboutSection>
+
+            <GallerySection>
+                
+                <CategoryTitle>our<span> category</span> <CategoryBox to="/shop">{'view all >>'}</CategoryBox> </CategoryTitle>
+
+                <BoxContainer>
+
+                    {aboutCategoryContent}   
+
+                </BoxContainer>
+
+            </GallerySection>
 
             <Footer />
 
