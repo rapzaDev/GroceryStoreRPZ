@@ -199,7 +199,7 @@ function About() {
 
             <GallerySection>
                 
-                <CategoryTitle>our<span> category</span> <CategoryBox to="/shop">{'view all >>'}</CategoryBox> </CategoryTitle>
+                <CategoryTitle>our<span> gallery</span> <CategoryBox to="/shop">{'view all >>'}</CategoryBox> </CategoryTitle>
 
                 <BoxContainer>
 
