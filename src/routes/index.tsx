@@ -5,6 +5,7 @@ import { Shop } from "../pages/Shop";
 import { About } from "../pages/About";
 import { Review } from "../pages/Review";
 import { Blog } from "../pages/Blog";
+import { Contact } from "../pages/Contact";
 
 const Routes: React.FC = () => (
     <RouterDOMRoutes>
@@ -13,6 +14,7 @@ const Routes: React.FC = () => (
         <Route path="/about" element={ <About/> }/>
         <Route path="/review" element={ <Review/> }/>
         <Route path="/blog" element={ <Blog/> }/>
+        <Route path="/contact" element={ <Contact/> }/>
     </RouterDOMRoutes>
 );
 
