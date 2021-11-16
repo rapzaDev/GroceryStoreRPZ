@@ -15,7 +15,15 @@ import {
     Searchbtn,
     Cartbtn,
     Loginbtn,
-    Credit
+    Credit,
+    ReviewHeading,
+    InfoContainer,
+    Info,
+    Content,
+    ReviewSection,
+    Box,
+    User,
+    InfoBox
 } from './styles';
 import { Link } from 'react-router-dom';
 
@@ -102,6 +110,122 @@ function Review() {
 
             </Header>
 
+
+            <ReviewHeading>
+                <h1>client's review</h1>
+                <p> <Link to="/">{`home >>`}</Link>review</p>
+            </ReviewHeading>
+
+            <InfoContainer>
+
+                <Info>
+                    <img src="images/icon-1.png" alt="" />
+                    <Content>
+                        <h3>fast delivery</h3>
+                        <span>within 30 minutes</span>
+                    </Content>
+                </Info>
+
+                <Info>
+                    <img src="images/icon-2.png" alt="" />
+                    <Content>
+                        <h3>24 / 7 available</h3>
+                        <span>call us anytime</span>
+                    </Content>
+                </Info>
+
+                <Info>
+                    <img src="images/icon-3.png" alt="" />
+                    <Content>
+                        <h3>easy payments</h3>
+                        <span>cash or credits</span>
+                    </Content>
+                </Info>
+
+            </InfoContainer>
+
+
+            <ReviewSection>
+
+                <Box>
+                    <User>
+                        <img src="images/pic-1.png" alt="" />
+                        <InfoBox>
+                            <h3>john doe</h3>
+                            <span>happy client</span>
+                        </InfoBox>
+                    </User>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem inventore voluptas cum! Ducimus eaque nesciunt minima libero voluptate repellendus eum! 
+                       Odio, eligendi! Ratione nobis vitae blanditiis placeat dolorum itaque natus.
+                    </p>
+                </Box>
+
+                <Box>
+                    <User>
+                        <img src="images/pic-2.png" alt="" />
+                        <InfoBox>
+                            <h3>john doe</h3>
+                            <span>happy client</span>
+                        </InfoBox>
+                    </User>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem inventore voluptas cum! Ducimus eaque nesciunt minima libero voluptate repellendus eum! 
+                       Odio, eligendi! Ratione nobis vitae blanditiis placeat dolorum itaque natus.
+                    </p>
+                </Box>
+
+                <Box>
+                    <User>
+                        <img src="images/pic-3.png" alt="" />
+                        <InfoBox>
+                            <h3>john doe</h3>
+                            <span>happy client</span>
+                        </InfoBox>
+                    </User>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem inventore voluptas cum! Ducimus eaque nesciunt minima libero voluptate repellendus eum! 
+                       Odio, eligendi! Ratione nobis vitae blanditiis placeat dolorum itaque natus.
+                    </p>
+                </Box>
+
+                <Box>
+                    <User>
+                        <img src="images/pic-4.png" alt="" />
+                        <InfoBox>
+                            <h3>john doe</h3>
+                            <span>happy client</span>
+                        </InfoBox>
+                    </User>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem inventore voluptas cum! Ducimus eaque nesciunt minima libero voluptate repellendus eum! 
+                       Odio, eligendi! Ratione nobis vitae blanditiis placeat dolorum itaque natus.
+                    </p>
+                </Box>
+
+                <Box>
+                    <User>
+                        <img src="images/pic-5.png" alt="" />
+                        <InfoBox>
+                            <h3>john doe</h3>
+                            <span>happy client</span>
+                        </InfoBox>
+                    </User>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem inventore voluptas cum! Ducimus eaque nesciunt minima libero voluptate repellendus eum! 
+                       Odio, eligendi! Ratione nobis vitae blanditiis placeat dolorum itaque natus.
+                    </p>
+                </Box>
+
+                <Box>
+                    <User>
+                        <img src="images/pic-6.png" alt="" />
+                        <InfoBox>
+                            <h3>john doe</h3>
+                            <span>happy client</span>
+                        </InfoBox>
+                    </User>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem inventore voluptas cum! Ducimus eaque nesciunt minima libero voluptate repellendus eum! 
+                       Odio, eligendi! Ratione nobis vitae blanditiis placeat dolorum itaque natus.
+                    </p>
+                </Box>
+
+            </ReviewSection>
 
             <Footer />
 
