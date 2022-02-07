@@ -132,7 +132,7 @@ function About() {
     return (
         <AboutContainer>
             <Header className="header">
-                <Logo href="Home.tsx"> <i className="fas fa-shopping-basket"></i>rpz groc</Logo>
+                <Logo href="/"> <i className="fas fa-shopping-basket"></i>rpz groc</Logo>
 
                 <Navbar className="navbar" active={menuBar}>
                     <Link to="/">Home</Link>
